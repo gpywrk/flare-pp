@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api/videos';
+const API_URL = '/api/videos';
 
 export const getCreatorVideos = async () => {
   try {

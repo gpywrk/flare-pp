@@ -23,7 +23,7 @@ const useChat = (currentUserId) => {
   const fetchConversations = async () => {
     setLoading(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/messages/conversations', {
+      const response = await axios.get('/api/messages/conversations', {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -46,7 +46,7 @@ const useChat = (currentUserId) => {
   const fetchPreferredEditors = async () => {
     setLoadingEditors(true);
     try {
-      const response = await axios.get('http://localhost:3000/api/user/chat-users', {
+      const response = await axios.get('/api/user/chat-users', {
         withCredentials: true
       });
       
@@ -72,7 +72,7 @@ const useChat = (currentUserId) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`http://localhost:3000/api/user/search?q=${searchQuery}`, {
+      const response = await axios.get(`/api/user/search?q=${searchQuery}`, {
         withCredentials: true
       });
       
@@ -96,7 +96,7 @@ const useChat = (currentUserId) => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `http://localhost:3000/api/messages/conversation/${partnerId}/${partnerModel}`,
+        `/api/messages/conversation/${partnerId}/${partnerModel}`,
         { withCredentials: true }
       );
       
@@ -185,7 +185,7 @@ const useChat = (currentUserId) => {
           message: newMessage.trim()
         }));
       } else {
-        await axios.post('http://localhost:3000/api/messages/send', {
+        await axios.post('/api/messages/send', {
           recipientId: selectedPartner._id,
           content: newMessage.trim()
         });

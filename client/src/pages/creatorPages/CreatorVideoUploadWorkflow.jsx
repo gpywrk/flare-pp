@@ -107,8 +107,8 @@ const VideoUploadWorkflow = ({ setShowUploadForm }) => {
         }
       }
 
-      console.log("[handleSubmit] Sending fetch request to http://localhost:3000/api/videos/creator-upload-video");
-      const response = await fetch("http://localhost:3000/api/videos/creator-upload-video", {
+      console.log("[handleSubmit] Sending fetch request to /api/videos/creator-upload-video");
+      const response = await fetch("/api/videos/creator-upload-video", {
         method: "POST",
         credentials: "include", 
         body: formData,

@@ -52,7 +52,7 @@ const Messages = () => {
   const fetchConversations = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3000/api/messages/conversations', {
+      const response = await fetch('/api/messages/conversations', {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -88,7 +88,7 @@ const Messages = () => {
       setLoading(true);
       console.log(`Fetching messages for partner: ${selectedPartner._id}`);
       
-      const response = await fetch(`http://localhost:3000/api/messages/conversation/${selectedPartner._id}`, {
+      const response = await fetch(`/api/messages/conversation/${selectedPartner._id}`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -142,7 +142,7 @@ const Messages = () => {
     
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3000/api/messages/search-users?q=${encodeURIComponent(searchQuery)}`, {
+      const response = await fetch(`/api/messages/search-users?q=${encodeURIComponent(searchQuery)}`, {
         method: 'GET',
         credentials: 'include',
         headers: {
@@ -200,7 +200,7 @@ const Messages = () => {
       
       setNewMessage('');
       
-      const response = await fetch('http://localhost:3000/api/messages/send', {
+      const response = await fetch('/api/messages/send', {
         method: 'POST',
         credentials: 'include',
         headers: {

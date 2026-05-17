@@ -21,7 +21,7 @@ const SearchPage = () => {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `http://localhost:3000/api/videos/creator-search-videos?query=${encodeURIComponent(query)}`,
+          `/api/videos/creator-search-videos?query=${encodeURIComponent(query)}`,
           {
             "credentials": "include",
             headers: {

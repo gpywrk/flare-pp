@@ -46,7 +46,7 @@ const FormPage = ({ isOpen, onClose }) => {
       formData.append('description', description);
      
       const xhr = new XMLHttpRequest();
-      xhr.open("POST", "http://localhost:3000/api/videos/creator-upload-video", true);
+      xhr.open("POST", "/api/videos/creator-upload-video", true);
       xhr.withCredentials = true;
 
       xhr.upload.onprogress = (event) => {

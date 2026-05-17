@@ -25,7 +25,7 @@ export const EditorAssignmentModal = ({
   useEffect(() => {
     const fetchEditors = async () => {
       try {
-        const response = await fetch('http://localhost:3000/api/videos/getEditors');
+        const response = await fetch('/api/videos/getEditors');
         if (!response.ok) {
           throw new Error('Failed to fetch editors');
         }
@@ -59,7 +59,7 @@ export const EditorAssignmentModal = ({
 
     try {
       setAssigningEditor(true);
-      const response = await fetch('http://localhost:3000/api/videos/assign-editor', {
+      const response = await fetch('/api/videos/assign-editor', {
         method: 'POST',
         credentials: "include",
         headers: {

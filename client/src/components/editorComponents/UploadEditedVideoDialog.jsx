@@ -73,7 +73,7 @@ const UploadEditedVideoDialog = ({ videoId, onVideoUpload }) => {
             setUploadProgress(0);
 
             const response = await axios.post(
-                `http://localhost:3000/api/editor/upload-edited-video/${videoId}`,
+                `/api/editor/upload-edited-video/${videoId}`,
                 formData,
                 {
                     withCredentials: true,

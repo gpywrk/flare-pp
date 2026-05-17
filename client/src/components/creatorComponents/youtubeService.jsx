@@ -2,7 +2,7 @@
 export const uploadVideoToYouTube = async (videoId, googleToken, onProgress) => {
   try {
     const response = await fetch(
-      `http://localhost:3000/api/videos/creator-upload-to-youtube`,
+      `/api/videos/creator-upload-to-youtube`,
       {
         method: "POST",
         credentials: "include",

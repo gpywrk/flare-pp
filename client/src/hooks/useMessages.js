@@ -26,7 +26,7 @@ export const useMessagesLogic = () => {
   const fetchPreferredEditors = async () => {
     setLoadingEditors(true);
     try {
-      const response = await fetch('http://localhost:3000/api/user/chat-users', {
+      const response = await fetch('/api/user/chat-users', {
         method: 'GET',
         credentials: "include",
         headers: {
@@ -91,7 +91,7 @@ export const useMessagesLogic = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:3000/api/messages/conversations', {
+      const response = await fetch('/api/messages/conversations', {
         method: 'GET',
         credentials: "include",
         headers: {
@@ -136,7 +136,7 @@ export const useMessagesLogic = () => {
     
     setLoading(true);
     try {
-      const response = await fetch(`http://localhost:3000/api/messages/conversation/${partnerId}`, {
+      const response = await fetch(`/api/messages/conversation/${partnerId}`, {
         method: 'GET',
         credentials: "include",
         headers: {
@@ -239,7 +239,7 @@ export const useMessagesLogic = () => {
     setNewMessage('');
   
     try {
-      const response = await fetch(`http://localhost:3000/api/messages/send`, {
+      const response = await fetch(`/api/messages/send`, {
         method: 'POST',
         credentials: 'include',
         headers: {

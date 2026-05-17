@@ -3,7 +3,7 @@ import {
   handleChatMessage, 
   handleAuthentication, 
   handleTyping, 
-  // handleUserStatus,
+  handleUserStatus,
   handleDisconnect
 } from './handlers/messageHandler.js';
 

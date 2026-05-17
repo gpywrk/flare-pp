@@ -34,7 +34,7 @@ const EditorVideoList = () => {
   useEffect(() => {
     const fetchAssignedVideos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/editor/assigned-videos", {
+        const response = await fetch("/api/editor/assigned-videos", {
           method: 'GET',
           credentials: "include",
           headers: {

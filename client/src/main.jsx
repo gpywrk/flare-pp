@@ -9,7 +9,8 @@ import { SocketProvider } from './hooks/SocketContext.jsx';
 import axios from 'axios';
 
 // Configure axios globally
-axios.defaults.baseURL = 'http://localhost:3000';
+// Empty baseURL = use same origin (works for both local proxy and production)
+axios.defaults.baseURL = '';
 axios.defaults.withCredentials = true; // Important for CORS & cookies
 
 ReactDOM.createRoot(document.getElementById('root')).render(

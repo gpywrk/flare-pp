@@ -72,7 +72,7 @@ const OAuth = ({ role }) => {
   const callBackend = async (role, userDetails, accessToken) => {
     try {
       console.log("role", role)
-      const response = await fetch("http://localhost:3000/api/auth/loginwithgoogle", {
+      const response = await fetch("/api/auth/loginwithgoogle", {
         method: "POST",
         credentials: "include",
         headers: {
